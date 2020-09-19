@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="todo_wrap">
+            <h1>todos</h1>
+            <div className="todo_input row">
+                <div className="col-md-12">
+                    <div className="input-group">
+                        <input className="form-control" placeholder="Enter new todo" value=""/>
+                        <div className="input-group-append">
+                            <button className="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div className="todo_cont row">
+                <div className="col-md-12">
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <span>111</span>
+
+                            <span className="float-right btn btn-danger btn-sm">
+                                del
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;

@@ -1,2 +1,2 @@
 1. .editorconfig
-2. bootstrap
+2. yarn add bootstrap@4
