@@ -2,20 +2,16 @@ import React, {useState} from 'react';
 
 function List({todo, index, delTodo, setCompleted}) {
     return (
-        <div className="todo_cont row">
-            <div className="col-md-12">
-                <ul className="list-group">
-                    <li className="list-group-item">
-                        <span className={todo.isCompleted ? 'isline' : ''}>{todo.text}</span>
+        <li className="todo_cont row">
+            <div className="list-group-item col-md-12">
+                <span className={todo.isCompleted ? 'isline' : ''}>{todo.text}</span>
 
-                        <span className="float-right btn btn-danger btn-sm"
-                              onClick={() => delTodo(index)}>del</span>
-                        <span className="float-right btn btn-primary btn-sm"
-                              onClick={() => setCompleted(index)}>Completed</span>
-                    </li>
-                </ul>
+                <span className="float-right btn btn-danger btn-sm"
+                      onClick={() => delTodo(index)}>del</span>
+                <span className="float-right btn btn-primary btn-sm"
+                      onClick={() => setCompleted(index)}>Completed</span>
             </div>
-        </div>
+        </li>
     );
 }
 

@@ -9,10 +9,8 @@ function App() {
     // 读取
     const listData = getTodoListData(useContext(Context), 'state');
 
-    // `todos` will be a state manager to manage state.
-    const api = SetTodoListData(
-        useReducer(reducer, listData)
-    );
+    // 存数据和监听数据辩护
+    const api = SetTodoListData(useReducer(reducer, listData), 'state');
 
     return (
         <div className="todo_wrap">
